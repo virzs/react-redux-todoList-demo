@@ -23,6 +23,7 @@ export const todos = (state: todoTypes[] = [], action: actionTypes) => {
     case TOGGLE_TODO:
       return state.map((item: todoTypes, index: number) => {
         if (index === action.index) {
+          console.log(index);
           return { ...item, ...{ completed: !item.completed } };
         }
         return item;

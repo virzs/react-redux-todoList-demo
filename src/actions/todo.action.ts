@@ -1,3 +1,5 @@
+import { todoTypes } from "../reducers/todos.reducer";
+
 // 定义ADD_TODO的类型，在小型项目中可以使用string字符串或者不定义
 export const ADD_TODO = "ADD_TODO"; // 增加todo
 export const TOGGLE_TODO = "TOGGLE_TODO"; // 切换todo
@@ -23,6 +25,11 @@ export const VisibilityFilters = {
   SHOW_COMPLETED: "SHOW_COMPLETED", // 显示完成的
   SHOW_ACTIVE: "SHOW_ACTIVE", // 显示未完成的
 };
+
+export interface stateTypes {
+  visibilityFilter: string;
+  todos: todoTypes[];
+}
 
 // 添加一个todo信息
 export const addTodo = (text: string) => {

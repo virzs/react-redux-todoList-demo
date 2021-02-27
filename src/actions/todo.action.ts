@@ -32,7 +32,7 @@ export interface stateTypes {
 }
 
 // 添加一个todo信息
-export const addTodo = (text: string) => {
+export const addTodo = (text: string): addTodoTypes => {
   return {
     type: ADD_TODO,
     text,
@@ -40,7 +40,7 @@ export const addTodo = (text: string) => {
 };
 
 // 切换todo
-export const toggleTodo = (index: number) => {
+export const toggleTodo = (index: number): toggleTodoTypes => {
   return {
     type: TOGGLE_TODO,
     index,
@@ -48,7 +48,9 @@ export const toggleTodo = (index: number) => {
 };
 
 // 设置todo信息可见
-export const setVisibilityFilter = (filter: string) => {
+export const setVisibilityFilter = (
+  filter: string
+): setVisibilityFilterTypes => {
   return {
     type: SET_VISIBILITY_FILTER,
     filter,
